@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section with Background Image -->
+<section class="hero bg-cover bg-center py-32" style="background-image: url('path/to/your/background-image.jpg');">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Welcome to TaxiHub</h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">Book your ride with ease</p>
+        <a href="{% url 'book_taxi' %}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded">Book Now</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About TaxiHub</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">TaxiHub provides reliable and comfortable transportation services. We offer a fleet of modern taxis and ensure a safe and pleasant journey for our passengers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center">
+                    <div class="bg-yellow-500 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M2 4a2 2 0 012-2h4a2 2 0 012 2v1h4a2 2 0 012 2v10a2 2 0 01-2 2H8a2 2 0 01-2-2h8v-1a2 2 0 01-2-2V7a2 2 0 012-2h2V4a2 2 0 00-2-2H4a2 2 0 00-2 2v1h2zm8 2h2v2h-2V6zM8 6h2v2H8V6zm0 4h2v2H8v-2zm8-4h2v2h-2V6zm0 4h2v2h-2v-2zM6 6h2v2H6V6zm0 4h2v2H6v-2z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Choose Your Taxi</h3>
+                    <p class="text-gray-600">Select from our range of available taxis</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-yellow-500 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 2a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2H3zm1 2a1 1 0 011-1h10a1 1 0 011 1v2H4V4zm11 9h-4v4h4v-4zm-6 0H5v-2h4v2z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Book Your Ride</h3>
+                    <p class="text-gray-600">Provide pickup time and location</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-yellow-500 rounded-full h-16 w-16 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm-1 2a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V6zm8 4a1 1 0 011 1v1a1 1 0 11-2 0V11a1 1 0 011-1zm0 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Enjoy Your Ride</h3>
+                    <p class="text-gray-600">Relax and enjoy your journey</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">24/7 Service</h3>
+                    <p class="text-gray-600">Available round the clock for your convenience</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">Easy Booking</h3>
+                    <p class="text-gray-600">Simple and quick booking process</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">Experienced Drivers</h3>
+                    <p class="text-gray-600">Professional drivers for a safe journey</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-16 bg-yellow-500">
+    <div class="container mx-auto px-4 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Book Your Ride?</h2>
+        <p class="text-lg">Experience the convenience and comfort with TaxiHub. Book your taxi now!</p>
+        <a href="{% url 'book_taxi' %}" class="bg-white hover:bg-gray-100 text-yellow-500 font-bold py-3 px-8 rounded mt-6 inline-block">Book Now</a>
+    </div>
+</section>
+{% endblock %}

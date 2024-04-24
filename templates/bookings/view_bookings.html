@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-md mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Your Bookings</h1>
+    <ul class="divide-y divide-gray-200">
+        {% for booking in bookings %}
+        <li class="py-4">
+            <div class="flex space-x-4">
+                <div class="flex-1">
+                    <p class="font-bold">{{ booking.taxi }}</p>
+                    <p class="text-sm text-gray-500">{{ booking.pickup_time }}</p>
+                </div>
+                <div>
+                    {% if booking.status == 'Pending' %}
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                        {{ booking.status }}
+                    </span>
+                    {% elif booking.status == 'Completed' %}
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                        {{ booking.status }}
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+        {% empty %}
+        <li class="py-4">
+            <p>No bookings found.</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

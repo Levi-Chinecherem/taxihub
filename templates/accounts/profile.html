@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+        <h1 class="text-3xl font-bold mb-4">Profile</h1>
+        
+        <!-- User Details Card -->
+        <div class="bg-gray-100 rounded-lg p-4 mb-6">
+            <h2 class="text-xl font-bold mb-2">User Information</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-gray-600 font-semibold">Username:</p>
+                    <p class="text-gray-800">{{ user.username }}</p>
+                </div>
+                <div>
+                    <p class="text-gray-600 font-semibold">Email:</p>
+                    <p class="text-gray-800">{{ user.email }}</p>
+                </div>
+                <!-- Add more user details as needed -->
+            </div>
+        </div>
+
+        <!-- Link to Change Password -->
+        <a href="{% url 'password_change' %}" class="block text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Change Password
+        </a>
+    </div>
+</div>
+{% endblock %}

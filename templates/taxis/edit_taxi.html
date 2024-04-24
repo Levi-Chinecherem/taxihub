@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-md mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Edit Taxi: {{ taxi.plate_number }}</h1>
+    {% if not request.user.has_perm('taxis.can_add_change_taxi') %}
+        <p class="text-red-500">You do not have permission to edit this taxi.</p>
+    {% else %}
+        <form method="post" enctype="multipart/form-data" class="space-y-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Save Changes
+            </button>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
